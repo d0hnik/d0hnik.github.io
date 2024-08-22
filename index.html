@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daniil Petrov</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+    <a class="header-logo" href="#">
+        PETROV
+    </a>
+    
+    <nav class="header-menu">
+        <ul class="header-menu-list">
+            <li class="header-menu-item">
+                <a href="#about-me" class="header-menu-link">About</a>
+            </li>
+
+            <li class="header-menu-item">
+                <a href="#skills" class="header-menu-link">Skills</a>
+            </li>
+
+            <li class="header-menu-item">
+                <a href="/" class="header-menu-link">Work</a>
+            </li>
+
+            <li class="header-menu-item">
+                <a href="/" class="header-menu-link">Contact</a>
+            </li>
+
+            <li class="header-menu-item">
+                <div class="header-menu-divider"></div>
+            </li>
+
+            <li class="header-menu-item">
+                <button class="header-theme-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 2V4" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 20V22" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.92993 4.92999L6.33993 6.33999" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.6599 17.66L19.0699 19.07" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12H4" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12H22" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.33993 17.66L4.92993 19.07" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.0699 4.92999L17.6599 6.33999" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                </button>
+            </li>
+
+            <li class="header-menu-item">
+                <button class="header-cv-button">Download CV</button>
+            </li>
+        </ul>
+    </nav>
+
+    <button class="dropDown-menu-button" onclick="showDropDown()">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 18H26" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 12H26" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 24H26" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+    </button>
+</header>
+
+<div class="header-dropDown" id="header-dropDown">
+    <div class="header-dropDown-container">
+        <div class="header-dropDown-header">
+            <button class="header-dropDown-logo transparent-button" onclick="hideDropDown()"><a href="#">PETROV</a></button>
+            <button class="transparent-button" onclick="hideDropDown()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="header-dropDown-links">
+            <li class="header-dropDown-item">
+                <button class="header-dropDown-link transparent-button" onclick="hideDropDownAndScrollTo('about-me')">About</button>
+            </li>
+            <li class="header-dropDown-item">
+                <button class="header-dropDown-link transparent-button" onclick="hideDropDownAndScrollTo('skills')">Skills</button>
+            </li>
+            <li class="header-dropDown-item">
+                <button class="header-dropDown-link transparent-button">Work</button>
+            </li>
+            <li class="header-dropDown-item">
+                <button class="header-dropDown-link transparent-button">Contact</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="content">
+    <section class="banner">
+        <div class="banner-body">
+            <div class="banner-title-and-description">
+                <div class="banner-title">Hi, I'm Daniil <p class="hand">👋</p></div>
+                <div class="banner-description">
+                    <p>I am a student at TalTech with a strong passion for becoming a full-stack developer.
+                        Currently, I have experience with HTML, CSS, Django, and other exciting technologies that showcase my growing skills in web development.
+                        I'm eager to continue learning and building innovative solutions as I advance in my career.</p>
+                </div>
+            </div>
+
+            <div class="banner-info">
+                <div class="banner-info">
+                    <div class="banner-location">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 10C20 16 12 22 12 22C12 22 4 16 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>Tallinn, Estonia</p>
+                    </div>
+                    <div class="banner-availability">
+                        <div class="banner-availability-container">
+                            <span class="availability-icon"></span>
+                        </div>
+                        <p>Looking for an internship</p>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-links">
+                <div class="banner-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9 18C4.49 20 4 16 2 16" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div class="banner-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 4C22 4 21.3 6.1 20 7.4C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.6 3 5C5.2 7.6 8.6 9.1 12 9C11.1 4.8 16 2.4 19 5.2C20.1 5.2 22 4 22 4Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-picture">
+            <img class="banner-img" src="images/image3.png">
+        </div>
+    </section>
+
+    <section class="about-me" id="about-me">
+            <div class="top-title">
+                <button class="top-title-button">About me</button>
+            </div>
+
+            <div class="about-me-block">
+                <div class="about-me-picture">
+                    <img class="about-me-img" width="480" src="images/me.JPG">
+                </div>
+
+                <div class="about-me-body">
+
+                    <div class="about-me-title">
+                        <p>Curious about me? Here you have it:</p>
+                    </div>
+
+                    <div class="about-me-description">
+                        <div class="about-me-description-block animate">
+                            <p>I'm currently a student at TalTech, working towards becoming a full stack developer. I'm focused on mastering both front-end and back-end technologies, making it a point to improve my skills every day. My goal is to gain a deep understanding of the full stack, allowing me to contribute to projects from start to finish.</p>
+                        </div>
+                        <div class="about-me-description-block  animate">
+                            <p>I first got into programming in primary school, but it wasn't until university that I really began to study it seriously. Beyond what I learn in my courses, I strive to learn something new daily. I’m curious by nature and embrace new technologies without hesitation.
+                            </p>
+                        </div>
+                        <div class="about-me-description-block  animate">
+                            <p>I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development.</p>
+                        </div>
+                        <div class="about-me-description-block  animate">
+                            <p>In my free time, I either focus on learning something new or stay active through sports. Ice hockey has been a big part of my life for over 15 years, and I’ve even had the honor of playing for the national team. The discipline and teamwork from hockey are values I apply to my studies and career goals.</p>
+                        </div>
+                        <div class="about-me-description-block  animate">
+                            <p></p>
+                        </div>
+                        <div class="about-me-description-block  animate">
+                            <p>One last thing, I'm available for any internship position, so feel free to reach out and say hello! I promise I don't bite 😉</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="top-title">
+            <button class="top-title-button">Skills</button>
+            <p>Technologies and languages I have worked with:</p>
+        </div>
+
+        <div class="skills-list">
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/js.png">
+                <p class="skills-list-text">Javascript</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/html.png">
+                <p class="skills-list-text">HTML</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/css.png">
+                <p class="skills-list-text">CSS</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/python.png">
+                <p class="skills-list-text">Python</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/django.png">
+                <p class="skills-list-text">Django</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/sqlite.png">
+                <p class="skills-list-text">SQLite</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/php.png">
+                <p class="skills-list-text">PHP</p>
+            </div>
+            <div class="skills-list-item animate">
+                <img class="skills-list-image" src="icons/skills/java.png">
+                <p class="skills-list-text">Java</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>

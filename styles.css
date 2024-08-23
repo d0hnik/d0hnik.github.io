@@ -219,12 +219,38 @@ p {
 @keyframes scale-in-top {
     0% {
         transform: scale(0);
-        transform-origin: 50% 0%;
+        transform-origin: 50% 0;
         opacity: 1;
     }
     100% {
         transform: scale(1);
-        transform-origin: 50% 0%;
+        transform-origin: 50% 0;
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-tr {
+    0% {
+        transform: scale(0);
+        transform-origin: 100% 0;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 100% 0;
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-tl {
+    0% {
+        transform: scale(0);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 0 0;
         opacity: 1;
     }
 }
@@ -239,6 +265,7 @@ p {
     position: sticky;
     background-color: var(--color-light);
     top: 0;
+    z-index: 500;
 }
 
 .header-cv-button {
@@ -312,7 +339,7 @@ p {
     height: var(--header-height);
     text-decoration: none;
     text-transform: uppercase;
-    font-family: var(--font-family-heading-h1-desktop);
+    font-family: var(--font-family-heading-h1-desktop), sans-serif;
     font-size: 25px;
 }
 
@@ -325,6 +352,18 @@ p {
     width: 100%;
     height: 100vh;
     background-color: var(--color-light);
+}
+
+.header-dropDown-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.dropDown-cv {
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 
 .transparent-button {
@@ -394,7 +433,7 @@ p {
 }
 
 .banner-title {
-    font-family: var(--font-family-heading-h1-desktop);
+    font-family: var(--font-family-heading-h1-desktop), sans-serif;
     font-size: 60px;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -407,7 +446,7 @@ p {
     animation-name: wave-hand;
     animation-delay: .8s;
     animation-duration: 2.5s;
-    animation-iteration-count: 3;
+    animation-iteration-count: 10;
 }
 
 .banner-location {
@@ -588,6 +627,107 @@ p {
     line-height: 1.56;
 }
 
+.work {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light-gray);
+    padding-block: 96px;
+    padding-inline: 112px;
+    row-gap: 48px;
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+}
+
+.work-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.work-item:nth-child(even).in-view {
+    animation-name: scale-in-tr;
+    animation-duration: 1s;
+}
+
+.work-item:nth-child(odd).in-view {
+    animation-name: scale-in-tl;
+    animation-duration: 1s;
+}
+
+.work-item {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.work-item-img {
+    padding: 48px;
+}
+
+.work-item-body-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 48px;
+    width: 80%;
+}
+
+.work-item-title {
+    font-family: var(--font-family-heading-h1-desktop), sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.work-item-description {
+    width: 80%;
+}
+
+.work-item-categories {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.work-item-links {
+    display: flex;
+    column-gap: 8px;
+}
+
+.work-item-link {
+    margin: 8px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 96px;
+    padding-inline: 112px;
+    row-gap: 48px;
+}
+
+.contact-email {
+    display: flex;
+    column-gap: 20px;
+}
+
+.contact-email-icon {
+    margin-block: 8px;
+}
+
+.contact-email-email {
+    font-family: var(--font-family-heading-h1-desktop), sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding-block: 2px;
+}
+
 @media (max-width: 1200px) {
     .about-me-img {
         padding: 0;
@@ -651,7 +791,9 @@ p {
     }
 
     .about-me-picture {
+        display: flex;
         max-width: 100%;
+        justify-content: center;
     }
 
     .about-me-img {
@@ -674,4 +816,37 @@ p {
         padding-inline: 16px;
         padding-block: 64px;
     }
+
+    .work {
+        padding-block: 64px;
+        padding-inline: 12px;
+    }
+
+    .work-item {
+        flex-direction: column;
+    }
+
+    .work-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .work-item-body-content {
+        width: 100%;
+        padding-inline: 32px;
+        padding-block: 0;
+    }
+
+    .work-item-description {
+        width: 100%;
+    }
+
+    .work-item-categories {
+        width: 100%;
+    }
+
+    .contact-email-email {
+        font-size: 20px;
+        align-content: center;
+    }
+
 }

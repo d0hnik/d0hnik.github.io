@@ -3,8 +3,6 @@ let deck = [];
 let currentPlayerIndex = 0;
 const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
-module.exports = { createDeck, shuffle, values  };
-
 const DRINKS_AMOUNT_FIRST_ROUND = 2;
 const DRINKS_AMOUNT_SECOND_ROUND = 4;
 const DRINKS_AMOUNT_THIRD_ROUND = 6;

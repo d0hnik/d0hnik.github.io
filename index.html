@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<main>
+    <div class="background-container">
+        <div id="description" class="description">
+            <div class="headerMid">
+                <div class="titleSection" id="titleSection">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                    <div class="description-text">
+                        <div class="this-is">
+                            <h1>THIS IS</h1>
+                        </div>
+                        <div class="klemps">
+                            <h1>KLEMPS</h1>
+                        </div>
+                    </div>
+                </div>
+                <div id="playerCountSetup" class="playerCountSetup">
+                        <label for="player-count">How many players?</label>
+                        <input class='number-input' type='number' id="player-count" min=2 max=6 required placeholder="From 2 to 6">
+                        <button class="description-button" onclick="setupPlayers()">CLICK HERE TO GET DRUNK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="name-setup" style="display: none;" class="player-setup">
+        <form id="player-form">
+            <div id="name-inputs"></div>
+            <div class="start-button-container"><button type="button" onclick="startGame()">START GAME</button></div>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="game" style="display: none;" class="game">
+        <div class="stats-container">
+            <div class="stats">
+                <div class="current-player-stats">
+                    <div class="current-player-picture">
+                        <img src="images/image%202.png" width="213" height="213">
+                    </div>
+
+                    <div class="current-player-name" id="current-player-name"></div>
+
+                    <div class="current-player-drinks-container">
+                        <div class="current-player-drinks">
+                            <div class="current-player-drinks-title">
+                                Given
+                            </div>
+                            <div class="current-player-drinks-given-amount" id="current-player-given-drinks"></div>
+                        </div>
+                        <div class="current-player-drinks">
+                            <div class="current-player-drinks-title">
+                                Taken
+                            </div>
+                            <div class="current-player-drinks-taken-amount" id="current-player-taken-drinks"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="other-player-stats" id="other-player-stats"></div>
+            </div>
+        </div>
+        <div class="game-container" id="game-window"></div>
+    </div>
+    <div id="colorChoicePopUp">
+        <h2>IS NEXT CARD RED OR BLACK?</h2>
+        <div class="btn-container">
+            <button class="btn black" onclick="checkColorChoice('black')">BLACK</button>
+            <button class="btn red" onclick="checkColorChoice('red')">RED</button>
+        </div>
+    </div>
+
+    <div id="rightGuessPopUp">
+        <h2>YOUR GUESS WAS <span class="right">RIGHT</span></h2>
+        <h2>PLEASE <span class="right">GIVE</span> OUT <span id="drinks-win" class="right"></span> DRINKS</h2>
+    </div>
+
+    <div id="wrongGuessPopUp">
+        <h2>YOUR GUESS WAS <span class="wrong">WRONG</span></h2>
+        <h2>YOU SHOULD TAKE <span id="drinks-lose" class="wrong"></span> DRINKS</h2>
+    </div>
+
+    <div id="higherLowerPopup">
+        <h2>IS NEXT CARD HIGHER OR LOWER THAN PREVIOUS CARD?</h2>
+        <div class="btn-container">
+            <button class="btn green" onclick="checkHigherLowerChoice('higher')">↑ HIGHER ↑</button>
+            <button class="btn red" onclick="checkHigherLowerChoice('lower')">↓ LOWER ↓</button>
+        </div>
+    </div>
+
+    <div id="betweenPopUp">
+        <h2>WILL THE NEXT CARD BE PLACED BETWEEN THE TWO PREVIOUS CARDS?</h2>
+        <div class="btn-container">
+            <button class="btn green" onclick="checkBetween('yes')">YES</button>
+            <button class="btn red" onclick="checkBetween('no')">NO</button>
+        </div>
+    </div>
+
+    <div id="suitPopUp">
+        <h2>WHAT SUIT IS THE NET CARD?</h2>
+        <div class="btn-container">
+            <button class="small-btn red" onclick="checkSuit('hearts')">♥</button>
+            <button class="small-btn red" onclick="checkSuit('diamonds')">♦</button>
+            <button class="small-btn black" onclick="checkSuit('clubs')">♣</button>
+            <button class="small-btn black" onclick="checkSuit('spades')">♠</button>
+        </div>
+    </div>
+</main>
+
+
+<script src="game.js"></script>
+</body>
+</html>
